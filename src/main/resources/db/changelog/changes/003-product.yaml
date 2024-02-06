@@ -1,0 +1,27 @@
+# Example for only yaml
+databaseChangeLog:
+  - changeSet:
+      id: createProductTable
+      author: Orçun Çolak
+      changes:
+        - createTable:
+            tableName: product
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: product_name
+                  type: VARCHAR(100)
+              - column:
+                  name: price
+                  type: DECIMAL(10, 2)
+                  constraints:
+                    checkConstraint: 'price >= 0'
+              - column:
+                  name: created_at
+                  type: TIMESTAMP WITH TIME ZONE
+                  defaultValueComputed: 'CURRENT_TIMESTAMP'

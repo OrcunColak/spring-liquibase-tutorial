@@ -9,23 +9,26 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.time.Instant;
 
 @Entity
-@Table(name = "orders")
+@Table(name = "product")
 @Getter
 @Setter
-public class Order {
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer id;
+    private Long id;
 
-    @Column(name = "customer_id")
-    private Integer customerId;
+    @Column(name = "product_name", length = 100)
+    private String productName;
 
-    @Column(name = "order_date")
-    private Instant orderDate;
+    @Column(name = "price", precision = 10, scale = 2)
+    private BigDecimal price;
 
+    @Column(name = "created_at", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    private Instant createdAt;
 }
