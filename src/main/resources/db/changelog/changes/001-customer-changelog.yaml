@@ -1,0 +1,12 @@
+# Example for custom SQL
+databaseChangeLog:
+  - changeSet:
+      id: createCustomerTable
+      author: Orçun Çolak
+      changes:
+        - sql:
+            sql: |
+              CREATE TABLE customer (
+                id INT PRIMARY KEY,
+                name VARCHAR(50)
+              );

@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: createOrderTable
+      author: Orçun Çolak
+      changes:
+        - createTable:
+            tableName: orders
+            columns:
+              - column:
+                  name: order_id
+                  type: INT
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: customer_id
+                  type: INT
+              - column:
+                  name: orders_date
+                  type: TIMESTAMP WITH TIME ZONE
