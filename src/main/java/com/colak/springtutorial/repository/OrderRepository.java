@@ -1,6 +1,6 @@
-package com.colak.springliquibasetutorial.repository;
+package com.colak.springtutorial.repository;
 
-import com.colak.springliquibasetutorial.jpa.Order;
+import com.colak.springtutorial.jpa.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface OrderRepository extends JpaRepository<Order, Integer> {

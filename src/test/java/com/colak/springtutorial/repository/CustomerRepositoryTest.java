@@ -1,6 +1,6 @@
-package com.colak.springliquibasetutorial.repository;
+package com.colak.springtutorial.repository;
 
-import com.colak.springliquibasetutorial.jpa.Product;
+import com.colak.springtutorial.jpa.Customer;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -10,14 +10,14 @@ import java.util.List;
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 @SpringBootTest
-class ProductRepositoryTest {
+class CustomerRepositoryTest {
 
     @Autowired
-    private ProductRepository productRepository;
+    private CustomerRepository customerRepository;
 
     @Test
     void findAll() {
-        List<Product> list = productRepository.findAll();
+        List<Customer> list = customerRepository.findAll();
         assertThat(list).isEmpty();
     }
 }
