@@ -1,3 +1,4 @@
+# This is the Master Change Log : The master change log is a central file that references other change log files.
 databaseChangeLog:
 #  - include:
 #      file: db/changelog/changes/001-customer-changelog.yaml

@@ -1,0 +1,13 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.10.xsd">
+
+
+    <changeSet id="7" author="john.doe">
+
+        <!-- This is an example to rename a column -->
+        <renameColumn tableName="product" oldColumnName="product_name" newColumnName="product_name"
+                      columnDataType="varchar(100)"/>
+    </changeSet>
+
+</databaseChangeLog>
