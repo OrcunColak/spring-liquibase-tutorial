@@ -3,10 +3,16 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.10.xsd">
 
 
-    <changeSet id="8" author="john.doe">
+    <changeSet id="rename-table" author="john.doe">
+
+        <!-- Check if the table exists before renaming -->
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="existing_table"/>
+        </preConditions>
+
 
         <!-- This is an example to rename a table -->
-        <renameTable oldTableName="existing_table" newTableName="existing_table"/>
+        <renameTable oldTableName="existing_table" newTableName="new_table"/>
     </changeSet>
 
 </databaseChangeLog>
