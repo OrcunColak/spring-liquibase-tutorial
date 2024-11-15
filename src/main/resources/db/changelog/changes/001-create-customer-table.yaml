@@ -8,5 +8,6 @@ databaseChangeLog:
             sql: |
               CREATE TABLE customer (
                 id INT PRIMARY KEY,
-                name VARCHAR(50)
+                name VARCHAR(50) NOT NULL,
+                nickname VARCHAR(50) NOT NULL
               );
